@@ -1,0 +1,15 @@
+development:
+  redact_words:
+    - Dog
+    - Cat
+    - Snake
+    - Dolphin
+    - Mammal
+
+production:
+  redact_words:
+    - Dog
+    - Cat
+    - Snake
+    - Dolphin
+    - Mammal
