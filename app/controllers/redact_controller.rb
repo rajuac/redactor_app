@@ -15,8 +15,8 @@ class RedactController < ApplicationController
 
     private
 
-  def log_redaction_request(original_text)
-    timestamp = Time.now.strftime("%Y-%m-%d %H:%M:%S")
-    RedactionLogger.info("Timestamp: #{timestamp}, Original Request: #{original_text}")
-  end
+    def log_redaction_request(original_text)
+      timestamp = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+      RedactionLogger.info("Timestamp: #{timestamp}, Original Request: #{original_text}")
+    end
 end
