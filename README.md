@@ -26,3 +26,9 @@ This README documents the steps necessary to get the application up and running.
 
   - In the above command, `8080` is the port number. You can change it to any desired port.
 
+## Running the Test Suite
+
+To run the test suite, ensure you have RSpec installed. Use the following command:
+
+
+bundle exec rspec
