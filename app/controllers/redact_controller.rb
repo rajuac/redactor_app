@@ -2,15 +2,15 @@ class RedactController < ApplicationController
     skip_before_action :verify_authenticity_token, only: [ :get_redaction ]
 
     def get_service
-        render plain: "Redaction Service", status: :ok
+      render plain: "Redaction Service", status: :ok
     end
 
     def get_redaction
-        input_text =  request.body.read
-        log_redaction_request(input_text)
+      input_text =  request.body.read
+      log_redaction_request(input_text)
 
-        redacted_text = RedactCreator.new(input_text).generate
-        render plain: redacted_text
+      redacted_text = RedactCreator.new(input_text).generate
+      render plain: redacted_text
     end
 
     private
