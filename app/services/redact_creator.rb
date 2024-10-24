@@ -1,8 +1,8 @@
 class RedactCreator
-    attr_reader :params
+    attr_reader :input_text
 
-    def initialize(params)
-        @params = params
+    def initialize(input_text)
+        @input_text = input_text
     end
 
     def generate
@@ -14,11 +14,10 @@ class RedactCreator
     private
 
     def redact_text
-      text = params
       redacted_words = REDACTION_WORDS
-
+      text =  input_text
       redacted_words.each do |word|
-        text = text.gsub(/\b#{Regexp.escape(word)}\b/i, "REDACTED")
+        text =  text.gsub(/\b#{Regexp.escape(word)}\b/i, "REDACTED")
       end
 
       text

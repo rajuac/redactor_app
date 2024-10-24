@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README documents the steps necessary to get the application up and running.
 
-Things you may want to cover:
+## Ruby version
 
-* Ruby version
+- **Ruby 3.2.2**
 
-* System dependencies
+## Rails version
 
-* Configuration
+- **Rails 7.2.1**
 
-* Database creation
+## System dependencies
 
-* Database initialization
+- Ensure you have the correct version of Ruby installed (3.2.2).
+- Install Rails 7.2.1 if it is not installed: `gem install rails -v 7.2.1`.
+- Ensure you have the necessary database and system dependencies.
 
-* How to run the test suite
+## Configuration
 
-* Services (job queues, cache servers, search engines, etc.)
+- The port the service presents on **should be configurable at runtime**.
+  - You can specify the port when starting the application using the following command:
+  
+    rails s -p 8080
+    
 
-* Deployment instructions
+  - In the above command, `8080` is the port number. You can change it to any desired port.
 
-* ...
